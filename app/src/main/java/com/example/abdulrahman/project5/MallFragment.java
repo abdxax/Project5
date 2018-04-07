@@ -15,10 +15,10 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ResturantFragment extends Fragment {
+public class MallFragment extends Fragment {
 
 
-    public ResturantFragment() {
+    public MallFragment() {
         // Required empty public constructor
     }
 
@@ -27,17 +27,18 @@ public class ResturantFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_resturant, container, false);
-        ListView listView=(ListView) view.findViewById(R.id.listresturant);
-        ArrayList<Resturant> resturantArrayList=new ArrayList<>();
+        View view= inflater.inflate(R.layout.fragment_place, container, false);
+        ListView listView=(ListView) view.findViewById(R.id.listplace);
+        ArrayList<Shopping> malleArrayList=new ArrayList<>();
         Resources resources=getResources();
-        String []resourcesStringArray=resources.getStringArray(R.array.resturantName);
-        int [] images={R.drawable.hotl1,R.drawable.hail2,R.drawable.hot3};
+        String []resourcesStringArray=resources.getStringArray(R.array.mallName);
+        int [] images={R.drawable.gardenmall,R.drawable.salmamall,R.drawable.grandmall};
         for (int i=0;i<resourcesStringArray.length;i++){
-            resturantArrayList.add(new Resturant(resourcesStringArray[i],images[i]));
+            malleArrayList.add(new Shopping(resourcesStringArray[i],images[i]));
         }
-        ResturantAdapter resturantAdapter=new ResturantAdapter(getContext(),resturantArrayList);
-        listView.setAdapter(resturantAdapter);
+        MallAdapter mallAdapter=new MallAdapter(getContext(),malleArrayList);
+        listView.setAdapter(mallAdapter);
+
         return view;
     }
 

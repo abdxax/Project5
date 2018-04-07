@@ -1,6 +1,7 @@
 package com.example.abdulrahman.project5;
 
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -29,9 +30,12 @@ public class placeFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_place, container, false);
         ListView listView=(ListView) view.findViewById(R.id.listplace);
         ArrayList<Place> placeArrayList=new ArrayList<>();
-        placeArrayList.add(new Place("Garden Mall",R.drawable.gardenmall));
-        placeArrayList.add(new Place("Salma Mall",R.drawable.salmamall));
-        placeArrayList.add(new Place("Grand Mall  Hotel",R.drawable.grandmall));
+        Resources resources=getResources();
+        String []nameplace=resources.getStringArray(R.array.placeName);
+        int[] images={R.drawable.barzan_palace_2,R.drawable.qishlah_palace};
+        for (int i=0;i<nameplace.length;i++){
+            placeArrayList.add(new Place(nameplace[i],images[i]));
+        }
         PlaceAdapter placeAdapter=new PlaceAdapter(getContext(),placeArrayList);
         listView.setAdapter(placeAdapter);
 

@@ -1,6 +1,7 @@
 package com.example.abdulrahman.project5;
 
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -28,10 +29,13 @@ public class HotelFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_hotel, container, false);
         ListView listView=(ListView) view.findViewById(R.id.listhotels);
+        Resources resources=getResources();
+        String []nameHotel=resources.getStringArray(R.array.hotelName);
+        int [] images={R.drawable.hotl1,R.drawable.hail2,R.drawable.hot3};
         ArrayList<Hotel> hotels=new ArrayList<>();
-        hotels.add(new Hotel("Millennium Hotel",R.drawable.hotl1));
-        hotels.add(new Hotel("Boudl Hotel",R.drawable.hot2));
-        hotels.add(new Hotel("Aronani  Hotel",R.drawable.hot3));
+       for (int i=0;i<nameHotel.length;i++){
+           hotels.add(new Hotel(nameHotel[i],images[i]));
+       }
         HotelAdapter hotelAdapter=new HotelAdapter(getContext(),hotels);
         listView.setAdapter(hotelAdapter);
         return view;

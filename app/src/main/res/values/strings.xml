@@ -4,7 +4,8 @@
     <string name="tab_text_2">Hotels</string>
     <string name="tab_text_3">Restaurants</string>
     <string name="tab4">places</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="tab5">Shopping </string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -13,4 +14,29 @@
     <string name="history">History</string>
     <string name="history_info">The city of Ha\'il was the capital of the emirate of Jabal Shammar from 1836 until the Saudi conquest of the emirate in 1921.[2] The emirate was led by a monarchy of the House of Rashīd. The first emir, Abdullah bin Rashid, took power with his brother emir Obaid and Jabbr\'s sons. Abdullah bin Rashid continued constructing the Barzan Palace in Ha\'il which had been started by Mohammad Ibn Ali. After the death of Abdullah bin Rashid (in 1847 or 1848) his son and successor, Talal (or Telal), completed the palace. During the Al Rashid period many foreign travelers visited Ha\'il and the Rashidi emirs, and described their impressions in different journals and books, including those of Georg August Wallin (1854), William Gifford Palgrave (1865), Lady Anne Blunt (1881), Charles Montagu Doughty (1888), and Gertrude Bell (1914).</string>
     <string name="hail_history_place">Hail History place</string>
+
+    <string-array name="hotelName">
+        <item>Millennium Hotel</item>
+        <item>Boudl Hotel</item>
+        <item>Aronani  Hotel</item>
+    </string-array>
+
+    <string-array name="resturantName">
+        <item>Millennium Hotel</item>
+        <item>Boudl Hotel</item>
+        <item>Aronani  Hotel</item>
+    </string-array>
+
+    <string-array name="mallName">
+        <item>Garden Mall</item>
+        <item>Salma Mall</item>
+        <item>Grand Mall</item>
+    </string-array>
+
+    <string-array name="placeName">
+        <item>Barzan palace</item>
+        <item>Qishlah palace</item>
+
+    </string-array>
+
 </resources>
